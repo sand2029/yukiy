@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset='utf-8'>
-    <title>英単語レベル</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>物理の基本</title>
     <script>function getlevel(){
         if(document.getElementById('word').value == "47800"){document.cookie = "yuki=True; path=/;";}else{
         let req = new XMLHttpRequest();
@@ -10,10 +11,70 @@
         req.open("GET", "/answer?q="+document.getElementById('word').value);
         req.send();}
     }</script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        article {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+    </style>
 </head>
-    英単語のレベルを出します。<br>
-    その単語が文脈から判断するべき単語か、覚えておくべき単語かの参考にしてください。<br>
-    <input id="word" type="text"></input><input type="button" onClick="getlevel()">確認</input>
+    <header>
+        <h1>物理の基本を押さえましょう</h1>
+    </header>
+    <main>
+        <article>
+            <h2>ニュートンの運動の法則</h2>
+            <p>
+            ニュートンの第一法則は、正味の外力が作用しない限り、物体は静止または等速運動を続けると述べています。</br>
+            ニュートンの第 2 法則は、物体にかかる正味の力をその質量と加速度に関連付けます。</br>
+            ニュートンの第 3 法則は、あらゆるアクションに対して、同等かつ反対の反応が存在することを示しています。</br>
+            </p>
+        </article>
+
+        <article>
+            <h2>重力</h2>
+            <p>
+            重力は 2 つの質量間の引力です。</br>
+            重力はそれらの質量の積に正比例し、それらの中心間の距離の二乗に反比例します。</br>
+            </p>
+        </article>
+
+        <article>
+            <h2>エネルギー</h2>
+            <p>
+            エネルギーとは仕事をする能力です。</br>
+            運動エネルギー、位置エネルギー、熱エネルギーなど、さまざまな形で存在します。</br>
+            エネルギー保存の法則では、エネルギーは生成したり破壊したりすることはできず、ある形式から別の形式に転送または変換されるだけであると述べています。</br>
+            </p>
+        </article>
+    </main>
+
+    <input id="word" type="text"></input><input type="button" value="確認" onClick="getlevel()"></input>
     <div id="info">
 </body>
 </html>
